@@ -1,0 +1,19 @@
+// launch.json 用于调试和运行
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) 启动",
+            "type": "lldb",
+            // "type": "cppdbg", 在macOS Cataina 10.15.1 和 xcode 11.2.1的情况下无法使用
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}/build",
+        }
+    ]
+}
